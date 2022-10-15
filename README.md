@@ -3,5 +3,5 @@
 
 - [x] Construir o esqueleto da página com HTML
 - [x] Aplicar a estilização com CSS
-- [] Aplicar a responsividade
-- [] Inserir dinaminisidade da página com JavaScript
+- [ ] Aplicar a responsividade
+- [ ] Inserir dinaminisidade da página com JavaScript
