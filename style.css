@@ -15,6 +15,7 @@ body{
     height: 100vh;
 }
 header{
+    width: 100%;
     display: flex;
     height: 12vh;
     justify-content: space-between;
@@ -61,37 +62,49 @@ nav > ul{
     border: 2px solid var(--color-02);
     transition: 0.4s;
 }
+.menu-burger{
+    display: none;
+}
 /********************************************/
 main{
-    display: flex;
-    padding: 10px 70px 0px 70px;
-    gap: 60px;
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 .content-text{
-    padding: 60px 0px 50px 110px;
-    width: 600px;
+    padding: 40px 0px 50px 0px;
+    max-width: 600px;
 }
-.content-text > h1{
+.content-text-box{
+    margin: 60px 0px 0px 160px ;
+}
+.content-text-box > h1{
     font-size: 65px;
     font-weight: 700;
     margin: 40px 0px 30px 0px;
 }
-.content-text > p{
-    width: 400px;
+.content-text-box > p{
+    max-width: 400px;
     text-align: justify;
     line-height: 20px;
     font-weight: 500;
     color: var(--color-02);
 }
-.content-image{
-    width: 600px;
-    height: 530px;
+.section-image-box{
+    height: 480px;
+    width: 520px;
+    background-image: url(images/image-hero-desktop.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 60px 0px 0px 100px;
 }
-.content-image > img{
+/* .content-image > img{
     height: 520px;
+    width: 100%;
     margin-left: 120px;
-}
-.content-text > button{
+} */
+.content-text-box > button{
     margin-top: 35px;
     height: 45px;
     width: 130px;
@@ -101,7 +114,7 @@ main{
     border-radius: 10px;
     cursor: pointer;
 }
-.content-text > button:hover{
+.content-text-box > button:hover{
     background: none;
     font-weight: 700;
     color: var(--color-03);
@@ -109,8 +122,63 @@ main{
     transition: 1s;
 }
 footer{
+    width: 100%;
     display: flex;
     align-items: center;
+    justify-content: center;
+}
+.footer-box{
+    display: flex;
+    max-width: 100%;
+    align-items: center;
     gap: 40px;
+    max-width: 600px;
     margin-top: 80px;
+}
+
+@media(max-width: 710px){
+    nav{
+        display: none;
+    }
+    .btns-header{
+        display: none;
+    }
+    .menu-burger{
+        display: block;
+    }
+    .content-text{
+        order: 2;
+        width: 300px;
+        text-align: center;
+        margin: 0 auto;
+        padding: 20px;
+    }
+    .content-text-box{
+        margin: 0 auto;
+        width: 100%;
+    }
+    .content-text-box > h1{
+        font-size: 40px;
+        width: 100%;
+        margin: 40px 0px 10px 0px;
+    }
+    .footer-box{
+        margin-top: 50px;
+        gap: 20px;
+    }
+    .footer-box > img {
+        height: 17px;
+    }
+    main{
+        grid-template-columns: 1fr;
+        padding: 10px 0px 0px 0px;
+        gap: 10px;
+    }
+    .section-image-box{
+        background-image: url(images/image-hero-mobile.png);
+        background-size: cover;
+        width: 100%;
+        height: 350px;
+        margin: 0;
+    }
 }
